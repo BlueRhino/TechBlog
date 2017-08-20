@@ -6,22 +6,22 @@ CopyOnWriteArrayList类位于java.util.concurrent包，JDK1.5引入，作者为[
 ### 写时过程
 由于采用写时复制的策略，其主要作用过程在于对存储数据进行修改时。以add函数为例。一下为JDK8中实现源码：
 	public boolean add(E e) {
-		final ReentrantLock lock = this.lock;
-		lock.lock();
-		try {
-			Object[] elements = getArray();
-			int len = elements.length;
-			Object[] newElements = Arrays.copyOf(elements, len + 1);
-			newElements[len] = e;
-			setArray(newElements);
-			return true;
-		} finally {
-			lock.unlock();
-		}
+	    final ReentrantLock lock = this.lock;
+	    lock.lock();
+	    try {
+	        Object[] elements = getArray();
+	        int len = elements.length;
+	        Object[] newElements = Arrays.copyOf(elements, len + 1);
+	        newElements[len] = e;
+	        setArray(newElements);
+	        return true;
+	    } finally {
+	        lock.unlock();
+	    }
 	}
-	
+ 
 1. 进入函数首先获取ReentrantLock重入锁[^1]；
-2. 获取当前对象中实际存储数据的Objective数组；
+2. 获取当前对象中实际存储数据的Objecte数组；
 3. 复制当前数组并且将数组长度扩展1；
 4. 将新数据插入当前数组的最后一位；
 5. 将指向原数组的变量置为指向新数组，释放锁，完成工作。
