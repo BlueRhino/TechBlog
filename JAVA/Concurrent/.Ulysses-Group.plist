@@ -16,18 +16,14 @@
 					<integer>5</integer>
 				</dict>
 			</dict>
-			<key>java.util.concurrent.locks.Lock详解.md</key>
+			<key>volatile字段.md</key>
 			<dict>
-				<key>explicitUnassignment</key>
-				<true/>
-				<key>firstUnassignment</key>
-				<real>524927241.06089801</real>
 				<key>lastModification</key>
-				<real>524927241.06089801</real>
+				<real>525538136.43404698</real>
 				<key>version</key>
 				<dict>
 					<key>a1bbe89b308274fa41d306ca005e6293c34a9a4f967741b22db76fbc0d14c9db</key>
-					<integer>23</integer>
+					<integer>26</integer>
 				</dict>
 			</dict>
 			<key>重入锁ReentrantLock学习.md</key>
@@ -48,10 +44,10 @@
 			<string>CopyOnWriteArrayList学习总结.md</string>
 		</array>
 		<array>
-			<string>重入锁ReentrantLock学习.md</string>
+			<string>volatile字段.md</string>
 		</array>
 		<array>
-			<string>java.util.concurrent.locks.Lock详解.md</string>
+			<string>重入锁ReentrantLock学习.md</string>
 		</array>
 	</array>
 	<key>storeFormatVersion</key>
@@ -61,7 +57,7 @@
 		<key>sheetClusters</key>
 		<dict>
 			<key>a1bbe89b308274fa41d306ca005e6293c34a9a4f967741b22db76fbc0d14c9db</key>
-			<integer>23</integer>
+			<integer>27</integer>
 		</dict>
 	</dict>
 </dict>
